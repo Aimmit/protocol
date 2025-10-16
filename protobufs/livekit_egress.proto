@@ -312,12 +312,16 @@ message EncodingOptions {
 enum EncodingOptionsPreset {
   H264_720P_30 = 0;           //  1280x720, 30fps, 3000kpbs, H.264_MAIN / OPUS
   H264_720P_60 = 1;           //  1280x720, 60fps, 4500kbps, H.264_MAIN / OPUS
-  H264_1080P_30 = 2;          // 1920x1080, 30fps, 4500kbps, H.264_MAIN / OPUS
-  H264_1080P_60 = 3;          // 1920x1080, 60fps, 6000kbps, H.264_MAIN / OPUS
+  H264_1080P_30 = 2;          //  1920x1080, 30fps, 4500kbps, H.264_MAIN / OPUS
+  H264_1080P_60 = 3;          //  1920x1080, 60fps, 6000kbps, H.264_MAIN / OPUS
   PORTRAIT_H264_720P_30 = 4;  //  720x1280, 30fps, 3000kpbs, H.264_MAIN / OPUS
   PORTRAIT_H264_720P_60 = 5;  //  720x1280, 60fps, 4500kbps, H.264_MAIN / OPUS
-  PORTRAIT_H264_1080P_30 = 6; // 1080x1920, 30fps, 4500kbps, H.264_MAIN / OPUS
-  PORTRAIT_H264_1080P_60 = 7; // 1080x1920, 60fps, 6000kbps, H.264_MAIN / OPUS
+  PORTRAIT_H264_1080P_30 = 6; //  1080x1920, 30fps, 4500kbps, H.264_MAIN / OPUS
+  PORTRAIT_H264_1080P_60 = 7; //  1080x1920, 60fps, 6000kbps, H.264_MAIN / OPUS
+  H264_480P_30 = 8;           //  854x480, 30fps, 1500kpbs, H.264_MAIN / OPUS
+  H264_480P_60 = 9;           //  854x480, 60fps, 2000kpbs, H.264_MAIN / OPUS
+  H264_360P_30 = 10;          //  640x360, 30fps, 1000kpbs, H.264_MAIN / OPUS
+  H264_360P_60 = 11;          //  640x360, 60fps, 1500kpbs, H.264_MAIN / OPUS
 }
 
 message UpdateLayoutRequest {
