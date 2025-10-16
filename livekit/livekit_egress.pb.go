@@ -329,27 +329,35 @@ func (AudioMixing) EnumDescriptor() ([]byte, []int) {
 type EncodingOptionsPreset int32
 
 const (
-	EncodingOptionsPreset_H264_720P_30           EncodingOptionsPreset = 0 //  1280x720, 30fps, 3000kpbs, H.264_MAIN / OPUS
-	EncodingOptionsPreset_H264_720P_60           EncodingOptionsPreset = 1 //  1280x720, 60fps, 4500kbps, H.264_MAIN / OPUS
-	EncodingOptionsPreset_H264_1080P_30          EncodingOptionsPreset = 2 // 1920x1080, 30fps, 4500kbps, H.264_MAIN / OPUS
-	EncodingOptionsPreset_H264_1080P_60          EncodingOptionsPreset = 3 // 1920x1080, 60fps, 6000kbps, H.264_MAIN / OPUS
-	EncodingOptionsPreset_PORTRAIT_H264_720P_30  EncodingOptionsPreset = 4 //  720x1280, 30fps, 3000kpbs, H.264_MAIN / OPUS
-	EncodingOptionsPreset_PORTRAIT_H264_720P_60  EncodingOptionsPreset = 5 //  720x1280, 60fps, 4500kbps, H.264_MAIN / OPUS
-	EncodingOptionsPreset_PORTRAIT_H264_1080P_30 EncodingOptionsPreset = 6 // 1080x1920, 30fps, 4500kbps, H.264_MAIN / OPUS
-	EncodingOptionsPreset_PORTRAIT_H264_1080P_60 EncodingOptionsPreset = 7 // 1080x1920, 60fps, 6000kbps, H.264_MAIN / OPUS
+	EncodingOptionsPreset_H264_720P_30           EncodingOptionsPreset = 0  //  1280x720, 30fps, 3000kpbs, H.264_MAIN / OPUS
+	EncodingOptionsPreset_H264_720P_60           EncodingOptionsPreset = 1  //  1280x720, 60fps, 4500kbps, H.264_MAIN / OPUS
+	EncodingOptionsPreset_H264_1080P_30          EncodingOptionsPreset = 2  //  1920x1080, 30fps, 4500kbps, H.264_MAIN / OPUS
+	EncodingOptionsPreset_H264_1080P_60          EncodingOptionsPreset = 3  //  1920x1080, 60fps, 6000kbps, H.264_MAIN / OPUS
+	EncodingOptionsPreset_PORTRAIT_H264_720P_30  EncodingOptionsPreset = 4  //  720x1280, 30fps, 3000kpbs, H.264_MAIN / OPUS
+	EncodingOptionsPreset_PORTRAIT_H264_720P_60  EncodingOptionsPreset = 5  //  720x1280, 60fps, 4500kbps, H.264_MAIN / OPUS
+	EncodingOptionsPreset_PORTRAIT_H264_1080P_30 EncodingOptionsPreset = 6  //  1080x1920, 30fps, 4500kbps, H.264_MAIN / OPUS
+	EncodingOptionsPreset_PORTRAIT_H264_1080P_60 EncodingOptionsPreset = 7  //  1080x1920, 60fps, 6000kbps, H.264_MAIN / OPUS
+	EncodingOptionsPreset_H264_480P_30           EncodingOptionsPreset = 8  //  854x480, 30fps, 1500kpbs, H.264_MAIN / OPUS
+	EncodingOptionsPreset_H264_480P_60           EncodingOptionsPreset = 9  //  854x480, 60fps, 2000kpbs, H.264_MAIN / OPUS
+	EncodingOptionsPreset_H264_360P_30           EncodingOptionsPreset = 10 //  640x360, 30fps, 1000kpbs, H.264_MAIN / OPUS
+	EncodingOptionsPreset_H264_360P_60           EncodingOptionsPreset = 11 //  640x360, 60fps, 1500kpbs, H.264_MAIN / OPUS
 )
 
 // Enum value maps for EncodingOptionsPreset.
 var (
 	EncodingOptionsPreset_name = map[int32]string{
-		0: "H264_720P_30",
-		1: "H264_720P_60",
-		2: "H264_1080P_30",
-		3: "H264_1080P_60",
-		4: "PORTRAIT_H264_720P_30",
-		5: "PORTRAIT_H264_720P_60",
-		6: "PORTRAIT_H264_1080P_30",
-		7: "PORTRAIT_H264_1080P_60",
+		0:  "H264_720P_30",
+		1:  "H264_720P_60",
+		2:  "H264_1080P_30",
+		3:  "H264_1080P_60",
+		4:  "PORTRAIT_H264_720P_30",
+		5:  "PORTRAIT_H264_720P_60",
+		6:  "PORTRAIT_H264_1080P_30",
+		7:  "PORTRAIT_H264_1080P_60",
+		8:  "H264_480P_30",
+		9:  "H264_480P_60",
+		10: "H264_360P_30",
+		11: "H264_360P_60",
 	}
 	EncodingOptionsPreset_value = map[string]int32{
 		"H264_720P_30":           0,
@@ -360,6 +368,10 @@ var (
 		"PORTRAIT_H264_720P_60":  5,
 		"PORTRAIT_H264_1080P_30": 6,
 		"PORTRAIT_H264_1080P_60": 7,
+		"H264_480P_30":           8,
+		"H264_480P_60":           9,
+		"H264_360P_30":           10,
+		"H264_360P_60":           11,
 	}
 )
 
@@ -4194,7 +4206,7 @@ const file_livekit_egress_proto_rawDesc = "" +
 	"\vAudioMixing\x12\x12\n" +
 	"\x0eDEFAULT_MIXING\x10\x00\x12\x16\n" +
 	"\x12DUAL_CHANNEL_AGENT\x10\x01\x12\x1a\n" +
-	"\x16DUAL_CHANNEL_ALTERNATE\x10\x02*\xcf\x01\n" +
+	"\x16DUAL_CHANNEL_ALTERNATE\x10\x02*\x97\x02\n" +
 	"\x15EncodingOptionsPreset\x12\x10\n" +
 	"\fH264_720P_30\x10\x00\x12\x10\n" +
 	"\fH264_720P_60\x10\x01\x12\x11\n" +
@@ -4203,7 +4215,12 @@ const file_livekit_egress_proto_rawDesc = "" +
 	"\x15PORTRAIT_H264_720P_30\x10\x04\x12\x19\n" +
 	"\x15PORTRAIT_H264_720P_60\x10\x05\x12\x1a\n" +
 	"\x16PORTRAIT_H264_1080P_30\x10\x06\x12\x1a\n" +
-	"\x16PORTRAIT_H264_1080P_60\x10\a*\x9f\x01\n" +
+	"\x16PORTRAIT_H264_1080P_60\x10\a\x12\x10\n" +
+	"\fH264_480P_30\x10\b\x12\x10\n" +
+	"\fH264_480P_60\x10\t\x12\x10\n" +
+	"\fH264_360P_30\x10\n" +
+	"\x12\x10\n" +
+	"\fH264_360P_60\x10\v*\x9f\x01\n" +
 	"\fEgressStatus\x12\x13\n" +
 	"\x0fEGRESS_STARTING\x10\x00\x12\x11\n" +
 	"\rEGRESS_ACTIVE\x10\x01\x12\x11\n" +
