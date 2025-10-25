@@ -73,4 +73,3 @@ jobs:
           add: '["livekit", "replay", "rpc", "infra", "packages/javascript/src/gen"]'
           default_author: github_actions
           message: generated protobuf
-          branch: ${{ github.ref_name }}
